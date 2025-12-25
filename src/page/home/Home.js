@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { ErrorBoundary } from 'react-error-boundary';
-
+import { Link } from 'react-router-dom';
 
 function ErrorHandler({error,resetErrorBoundary}){
     return(
@@ -60,6 +60,8 @@ const [country,setCountry]=useState(null);
         <City name="London"  />
         <Country name={country} />
       </ErrorBoundary>
+      <Link to="/user">User</Link>
+      <Link to="/show">Show</Link>
       <h1>Welcome to List of Country</h1>
     </div>
   )
